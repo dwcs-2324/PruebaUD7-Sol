@@ -1,6 +1,8 @@
 
 
 const BASE_URL = "http://localhost:3000/controller/FrontController.php";
+
+
 const OK_TEXT = "Aceptar";
 const CANCEL_TEXT = "Cancelar";
 
@@ -42,7 +44,7 @@ function onceLoaded() {
         setEmail('')
     }
 
-    //1. a)
+    
     document.querySelector('#registerLink').onclick = () => {
         showView(REGISTER_VIEW_ID);
         setPageTitle(REGISTER_TITLE);
