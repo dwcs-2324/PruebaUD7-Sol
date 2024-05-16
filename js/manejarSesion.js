@@ -89,7 +89,7 @@ function logout() {
 
 
 
-function checkEmail() {
+function checkEmailJSON() {
     let email = document.getElementById('emailRegister').value;
     const data = {'email': email};
 

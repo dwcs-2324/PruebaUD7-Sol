@@ -59,15 +59,8 @@ function onceLoaded() {
     };
 
     document.querySelector("#emailRegister").addEventListener("focusout", () => {
-        checkEmail();
+        checkEmailJSON();
     });
-
-
-
-
-
-
-
 
 }
 
