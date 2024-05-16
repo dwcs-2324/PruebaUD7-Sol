@@ -88,7 +88,7 @@ function logout() {
 }
 
 
-//1. b)
+
 function checkEmail() {
     let email = document.getElementById('emailRegister').value;
     const data = {'email': email};

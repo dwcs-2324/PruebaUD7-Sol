@@ -3,7 +3,7 @@
 const BASE_URL = "http://localhost:3000/controller/FrontController.php";
 const OK_TEXT = "Aceptar";
 const CANCEL_TEXT = "Cancelar";
-//2.c)
+
 const ADMIN_ROLE = 1;
 //Page titles
 const LOGIN_TITLE = 'Login';
@@ -17,7 +17,7 @@ var viewIdsArray = [LOGIN_VIEW_ID, REGISTER_VIEW_ID, MAIN_VIEW_ID];
 const ERROR_MSG_TYPE = "danger";
 const SUCCESS_MSG_TYPE = "success";
 
-//let pwdRegExp = new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\$@\.\?])(?=.{6,})');
+
 
 
 window.onload = onceLoaded;
@@ -25,7 +25,7 @@ window.onload = onceLoaded;
 
 function onceLoaded() {
 
-    console.debug("window loaded");
+    console.log("window loaded");
     document.querySelector('#formLogin').onsubmit = loginJSON;
     document.querySelector('#formLogout').onsubmit = function (event) {
         //evitamos que se envíe el formulario
@@ -132,20 +132,7 @@ function showView(viewId) {
 
 
 }
-/**
- * Muestra/oculta un elemento html
- * @param {HTMLElement} htmlElement objeto html a mostrar/ocultar
- * @param {boolean} show true para mostrar, false para ocultar 
- */
-function show(htmlElement, show) {
-    if (show) {
-        // hay que mostrar 
-        htmlElement.classList.remove('d-none');
-    } else {
-        // hay que ocultar
-        htmlElement.classList.add('d-none');
-    }
-}
+
 
 /**
  * Establece el email en la cabecera. Si se pasa cadena vacía, vacía el contenido del main
@@ -187,7 +174,7 @@ function showEmailFeedback(available) {
 }
 
 /**
- * Añadae una clase css para mostrar disponibilidad/falta de disponibilidad a un elmento HTML
+ * Añada una clase css para mostrar disponibilidad/falta de disponibilidad a un elmento HTML
  * @param {HTMLElement} htmlElement elemento que recibirá la clase css
  * @param {boolean} available true si está disponible, false en caso contrario
  */
@@ -198,5 +185,20 @@ function addAvailableCssClass(htmlElement, available) {
     } else {
         htmlElement.classList.remove('available');
         htmlElement.classList.add('unavailable');
+    }
+}
+
+/**
+ * Muestra/oculta un elemento html
+ * @param {HTMLElement} htmlElement objeto html a mostrar/ocultar
+ * @param {boolean} show true para mostrar, false para ocultar 
+ */
+function show(htmlElement, show) {
+    if (show) {
+        // hay que mostrar 
+        htmlElement.classList.remove('d-none');
+    } else {
+        // hay que ocultar
+        htmlElement.classList.add('d-none');
     }
 }
